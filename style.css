@@ -1,0 +1,168 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    overflow-x: scroll;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 20pt;
+    border-style: dashed;
+}
+
+td {
+    width: 300px;
+    height: auto;
+}
+
+#form1 input[type=checkbox] {
+    transform: scale(1.3);
+}
+
+select {
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.title {
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 140, 255);
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#form1{
+    margin-top: 10px;
+}
+
+#form1 span{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.err#err1 {
+    font-size: 50px;
+    color: red;
+}
+
+.err#err2 {
+    font-size: 50px;
+    color: red;
+}
+
+#start{
+    width: 300px;
+    height: 100px;
+    bottom: 10%;
+    border: #ff0000;
+    border-style:solid;
+    background-color: rgb(255, 0, 0);
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+#start:hover{
+    background-color: rgb(255, 255, 255);
+    color: #ff0000;
+}
+
+
+#form2{
+    width: 100%;
+    top: 20%;
+    position: absolute;
+    text-align: center;
+}
+
+#form2 div{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+#form2 input[type=button] {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 100px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(100, 200, 255);
+    background-color: rgb(100, 200, 255);
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+#form2 input[type=button]:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(100, 200, 255);
+}
+
+#form2 input[type=button]:disabled{
+    border-style: none;
+    background-color: rgb(182, 231, 255);
+    color: rgb(255, 255, 255);
+}
+
+#form2 div#tmp{
+    margin-top: 50px;
+    font-size: 100px;
+}
+
+#form3{
+    width: 100%;
+    top: 20%;
+    position: absolute;
+    text-align: center;
+}
+
+#form3 div{
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+#retry{
+    width: 300px;
+    height: 100px;
+    margin-top: 30px;
+    justify-content: center;
+    border: rgb(255, 130, 0);
+    border-style:solid;
+    background-color: rgb(255, 130, 0);
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+#retry:hover{
+    background-color: #FFFFFF;
+    color: rgb(255, 130, 0);
+}
+
+#fin{
+    width: 100%;
+    font-size: 100px;
+    top: 20%;
+    text-align: center;
+    position: fixed;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+

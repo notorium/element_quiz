@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>元素記号クイズ</title>
+    <script src="Config.js"></script>
+    <script src="CConfig.js"></script>
+    <script src="Variable.js"></script>
+    <script src="Game.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="title">元素記号クイズ</div>
+    <form id="form1">
+        <span>出題範囲</span>
+        <span class="err" id="err1" style="visibility: hidden;">！</span>
+        <table class="group">
+            <tr>
+                <td><input type="checkbox" id="grp1" checked=true onchange="check()"> アルカリ金属</td>
+                <td><input type="checkbox" id="grp2" checked=true onchange="check()"> アルカリ土類金属</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="grp3" checked=true onchange="check()"> ハロゲン</td>
+                <td><input type="checkbox" id="grp4" checked=true onchange="check()"> 希ガス</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="grp5" checked=true onchange="check()"> 半導体</td>
+                <td><input type="checkbox" id="grp6" checked=true onchange="check()"> 遷移金属</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="grp7" checked=true onchange="check()"> ランタノイド</td>
+                <td><input type="checkbox" id="grp8" checked=true onchange="check()"> アクチノイド</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="grp9" checked=true onchange="check()"> その他非金属</td>
+                <td><input type="checkbox" id="grp10" checked=true onchange="check()"> メタロイド</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" id="grp11" checked=true onchange="check_all()"> 全ての元素</td>
+            </tr>
+        </table>
+
+        <span>出題方法</span>
+        <span class="err" id="err2" style="visibility: hidden;">！</span><br>
+        <select id="q_sct">
+            <option value="1" selected=true>元素記号</option>
+            <option value="2">元素名</option>
+            <option value="3">原子番号</option>
+        </select>
+        <span> → </span>
+        <select id="a_sct">
+            <option value="1">元素記号</option>
+            <option value="2" selected=true>元素名</option>
+            <option value="3">原子番号</option>
+        </select><br>
+        <span>問題数</span>
+        <select id="n_sct">
+            <option value="5">5問</option>
+            <option value="10" selected=true>10問</option>
+            <option value="30">30問</option>
+            <option value="50">50問</option>
+            <option value="100">100問</option>
+            <option value="0">自動</option>
+        </select>
+    </form>
+
+    <button  id="start" onclick="start()">スタート</button>
+
+    <form id="form2" style="visibility: hidden;">
+        <div id="quizcnt"></div>
+        <div id="question">問題文</div>
+        <input type="button" id="chos1" onclick="chose(chos1.value)">
+        <input type="button" id="chos2" onclick="chose(chos2.value)">
+        <input type="button" id="chos3" onclick="chose(chos3.value)">
+        <input type="button" id="chos4" onclick="chose(chos4.value)">
+        <div id="tmp"></div>
+    </form>
+
+    <div id="fin" style="visibility: hidden;">終了!!</div>
+
+    <form id="form3" style="visibility: hidden;">
+        <div>結果</div>
+        <div id="result"></div>
+        <input type="button" id="retry" onclick="restart()" value="リトライ">
+    </form>
+</body>
+
+</html>
