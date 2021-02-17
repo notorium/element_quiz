@@ -31,12 +31,21 @@ function start() {
 function makequiz() {
     tmparray.splice(0);
     dummyarray.splice(0);
-    for (i = 0; i < 10; i++) {
-        if (chkbox[i] == true) {
-            eval("g_num" + (i + 1)).forEach(r => tmparray.push(r));
-            eval("g_num" + (i + 1)).forEach(r => dummyarray.push(r));
-        }
-    }
+
+    // チェックされている出題範囲から問題をつくる
+    Array.from(document.getElementsByClassName("grp"))
+        // チェックがついているもののみフィルタリング
+        .filter(v => v.checked)
+        // チェックボックスのvalueの値を取得する
+        .map(v => v.value)
+        // groupsから対応する番号の配列を取得する
+        // flatMapを使うことで配列のネストがなくなる
+        // ex) [[1,2,3], [4,5,6]] -> [1,2,3,4,5,6]
+        .flatMap(v => group[v])
+        .forEach(v => {
+            tmparray.push(v);
+            dummyarray.push(v);
+        });
 }
 
 function next() {

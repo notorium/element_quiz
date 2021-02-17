@@ -1,6 +1,3 @@
-//変数
-let chkbox = [true, true, true, true, true, true, true, true, true, true, true];
-
 let elements = [];
 
 // 出題範囲
