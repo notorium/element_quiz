@@ -110,9 +110,9 @@ function chose(chos_num) {
     document.getElementById("chos3").setAttribute("disabled", true);
     document.getElementById("chos4").setAttribute("disabled", true);
     if (quizcount == num) {
-        setTimeout(function () { fin() }, 500);
+        setTimeout(fin, 500);
     } else {
-        setTimeout(function () { next() }, 500);
+        setTimeout(next, 500);
     }
 }
 
