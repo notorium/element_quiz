@@ -1,3 +1,5 @@
+"use strict";
+
 let quizarray = [];
 let tmparray = [];
 let dummyarray = [];
@@ -53,7 +55,7 @@ function next() {
     quizcount++;
     document.getElementById("quizcnt").innerHTML = quizcount + " / " + num + " 問目";
     document.getElementById("question").innerHTML = q_str[q_num - 1] + elements[tmparray[0] - 1][q_num - 1] + a_str[a_num - 1];
-    for (i = 0; i < quizarray.length; i++) {
+    for (let i = 0; i < quizarray.length; i++) {
         document.getElementById(`chos${i + 1}`).setAttribute("value", elements[quizarray[i] - 1][a_num - 1]);
     }
     document.getElementById("tmp").innerHTML = "";
@@ -76,7 +78,7 @@ function makequizlist() {
 }
 
 function shuffle(array) {
-    for (i = 0; i < 100; i++) {
+    for (let i = 0; i < 100; i++) {
         let rnd1 = Math.floor(Math.random() * array.length);
         let rnd2 = Math.floor(Math.random() * array.length);
         [array[rnd1], array[rnd2]] = [array[rnd2], array[rnd1]];

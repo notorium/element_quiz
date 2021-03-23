@@ -1,3 +1,5 @@
+"use strict";
+
 let elements = [];
 
 // 出題範囲
